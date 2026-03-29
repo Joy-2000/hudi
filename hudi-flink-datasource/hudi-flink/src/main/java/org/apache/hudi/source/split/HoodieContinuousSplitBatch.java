@@ -18,13 +18,10 @@
 
 package org.apache.hudi.source.split;
 
-import org.apache.hudi.common.fs.FSUtils;
 import org.apache.hudi.common.table.cdc.HoodieCDCFileSplit;
 import org.apache.hudi.common.util.ValidationUtils;
 import org.apache.hudi.source.IncrementalInputSplits;
-import org.apache.hudi.storage.StoragePath;
 import org.apache.hudi.table.format.cdc.CdcInputSplit;
-import org.apache.hudi.table.format.mor.MergeOnReadInputSplit;
 
 import lombok.Getter;
 
@@ -32,8 +29,6 @@ import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 import java.util.stream.Collectors;
-
-import static org.apache.hudi.util.StreamerUtil.EMPTY_PARTITION_PATH;
 
 /**
  * Result from continuous enumerator. It has the same semantic to the {@link org.apache.hudi.source.IncrementalInputSplits.Result}.
